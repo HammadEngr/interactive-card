@@ -1,0 +1,328 @@
+/*******************************************************************************************/
+/************************************ Desktop Layout **************************************/
+/* --------------------------------------------------------------------------------------- */
+body {
+    margin: 0 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+    font-size: x-small;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    position: relative;
+}
+
+/************************************** Main background ************************************/
+.main {
+    display: flex;
+}
+
+.backgroundImageMain {
+    /* height: 100vh; */
+}
+
+.coloredBox {
+    flex: 0.5 5%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.whiteBox {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/************************************** Credentials Input ********************************/
+.credentials {
+    width: 40%;
+}
+
+.cardNumberInput,
+.cardHolderNameInput {
+    width: 100%;
+}
+
+.correction {
+    font-size: 0.5rem;
+    color: red;
+    text-transform: none;
+    letter-spacing: initial;
+}
+
+.cardDetails {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+}
+
+.monthInput,
+.yearInput {
+    width: 60px;
+}
+
+.cvcInput {
+    width: 100%;
+}
+
+.cvcInput:hover,
+.monthInput:hover,
+.yearInput:hover,
+.cardNumberInput:hover,
+.cardHolderNameInput:hover {
+    cursor: pointer;
+}
+
+.btnConfirm,
+.btnContinue {
+    width: 100%;
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: hsl(278, 68%, 11%);
+    color: antiquewhite;
+}
+
+input {
+    padding: 0 0;
+    border: 1px solid;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.attribution {
+    text-align: center;
+    background-color: bisque;
+}
+
+.hide {
+    display: none;
+}
+
+
+.thanksNote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+
+
+/*************************************** Cards Display ***********************************/
+.displayCards {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    left: 10%;
+    top: 15%;
+}
+
+.BG {
+    padding-bottom: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+.frontFace,
+.backFace {
+    position: relative;
+}
+
+
+/************************************ credentials on cards *************************************/
+.onCardFF {
+    display: grid;
+    position: absolute;
+    row-gap: 5%;
+    top: 5%;
+    left: 5%;
+    color: bisque;
+}
+
+.cardIcon {
+    width: 20%;
+}
+
+.numberOnCard {
+    font-size: 1.5vw;
+    margin-top: 20%;
+    margin-bottom: 0;
+}
+
+.nameOnCard,
+.expOnCard {
+    margin: 0 0;
+}
+
+.nameAndExp {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 2%;
+}
+
+.cvcOnCard {
+    position: absolute;
+    top: 38%;
+    right: 10%;
+}
+
+/************************************* Mobile Layout ****************************************/
+@media (max-width:575px) {
+    body {
+        height: 100%;
+        width: 100vw;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100vw;
+        align-items: center;
+        position: relative;
+    }
+
+    .coloredBox {
+        flex: 1 250px;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .backgroundImageMain {
+        all: initial;
+        width: 100%;
+    }
+
+    .whiteBox {
+        all: initial;
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+        align-items: center;
+        width: 90vw;
+    }
+
+    .credentials {
+        all: initial;
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-family: sans-serif;
+        font-size: x-small;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        z-index: 2;
+    }
+
+    .displayCards,
+    .BG,
+    .backFace,
+    .frontFace,
+    .cardIcon,
+    .onCardFF,
+    .nameOnCard,
+    .expOnCard,
+    .numberOnCard,
+    .nameOnCard,
+    .nameOnCard,
+    .expOnCard,
+    .cvcOnCard {
+        all: initial;
+    }
+
+
+    /* */
+    .displayCards {
+        position: absolute;
+        top: 20px;
+        height: 100vh;
+        width: 100vw;
+    }
+
+
+    .BG {
+        width: 60vw;
+    }
+
+    .frontface {
+        position: absolute;
+        z-index: 1;
+        width: 60vw;
+        top: 15%;
+        left: 10%;
+    }
+
+    .backFace {
+        position: absolute;
+        width: 60vw;
+        right: 10%;
+    }
+
+    .onCardFF {
+        display: grid;
+        row-gap: 20%;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        width: 100%;
+
+    }
+
+    .nameAndExp {
+        display: grid;
+        grid-template-columns: auto auto;
+        /* justify-content: space-evenly; */
+    }
+
+    .numberOnCard {
+        font-size: 5vw;
+        font-family: sans-serif;
+    }
+
+    .nameOnCard,
+    .expOnCard {
+        font-size: 4vw;
+        font-family: sans-serif;
+    }
+
+    .cvcOnCard {
+        position: absolute;
+        top: 45%;
+        right: 10%;
+    }
+
+    .thanksBox {
+        z-index: 2;
+    }
+
+    .thanksNote {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .btnContinue {
+        width: 100%;
+        margin-top: 20px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: hsl(278, 68%, 11%);
+        color: antiquewhite;
+    }
+}

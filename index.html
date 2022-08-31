@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+  <section class="main">
+    <div class="coloredBox">
+      <img class="backgroundImageMain" src="images/bg-main-desktop.png" alt="background_image">
+    </div>
+    <div class="whiteBox">
+      <div class="credentials">
+        <p>Cardholder Name</p>
+        <input class="cardHolderNameInput" id="inputName" placeholder="Enter your name here" type="text">
+
+        <p>Card Number </p>
+        <input class="cardNumberInput" id="inputNumber" placeholder="0000-0000-0000-0000" maxlength="19" minlength="19"
+          type="text">
+        <p class="correctionMsgNumber correction hide">Wrong formate, numbers only</p>
+
+        <div class="cardDetails">
+          <div class="date">
+            <p>Exp. date (MM/YY)</p>
+            <input class="monthInput" id="inputMonth" placeholder="12" maxlength="2" type="text">
+            <input class="yearInput" id="inputYear" placeholder="22" maxlength="2" type="text">
+            <p class="correctionMsgDate correction hide">Can't be blank</p>
+
+          </div>
+          <div class="cvcCode">
+            <p>cvc</p>
+            <input class="cvcInput" id="inputCvc" placeholder="123" maxlength="3" type="text">
+            <p class="correctionMsgCvc correction hide">Can't be blank</p>
+          </div>
+        </div>
+        <button class="btnConfirm">Confirm</button>
+      </div>
+      <div class="thanksBox hide">
+        <div class="thanksNote">
+          <img src="images/icon-complete.svg" alt="">
+          <h1>Thank You</h1>
+          <p class="detailAdded">we have added your details</p>
+          <button class="btnContinue">Continue</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="displayCards">
+
+      <div class="frontface">
+        <img class="BG bg1" src="images/bg-card-front.png" alt="">
+
+        <div class="onCardFF">
+          <img class="cardIcon" src="images/card-logo.svg" alt="">
+          <p class="numberOnCard">0000 0000 0000 0000</p>
+          <div class="nameAndExp">
+            <p class="nameOnCard">Hammad Ahmed</p>
+            <p class="expOnCard"> <span class="month">00</span><span class="slash">/</span><span class="year">00</span>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="backFace">
+        <img class="BG bg2" src="images/bg-card-back.png" alt="">
+        <p class="cvcOnCard">123</p>
+      </div>
+
+    </div>
+
+
+
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Hammad Ahmed</a>.
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
